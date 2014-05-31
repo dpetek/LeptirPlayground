@@ -1,0 +1,3 @@
+[submodule "module/Leptir"]
+	path = module/Leptir
+	url = git@github.com:Backplane/Leptir.git
