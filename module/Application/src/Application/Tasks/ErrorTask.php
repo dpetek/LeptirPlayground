@@ -13,7 +13,7 @@ class ErrorTask extends AbstractLeptirTask
      */
     protected function doJob()
     {
-        trigger_error('Fatal error triggered.', E_USER_ERROR);
+        $fatal->error();
 
         return self::EXIT_SUCCESS;
     }
