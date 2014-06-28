@@ -13,8 +13,13 @@ class SlowTask extends AbstractLeptirTask
      */
     protected function doJob()
     {
-        sleep(120);
+        sleep(20);
 
         return self::EXIT_SUCCESS;
+    }
+
+    public function getName()
+    {
+        return 'SlowTask';
     }
 }

@@ -18,6 +18,11 @@ class ExceptionTask extends AbstractLeptirTask
 
         return self::EXIT_SUCCESS;
     }
+
+    public function getName()
+    {
+        return 'ExceptionTask';
+    }
 }
 
  

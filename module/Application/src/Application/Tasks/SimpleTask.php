@@ -13,8 +13,18 @@ class SimpleTask extends AbstractLeptirTask
      */
     protected function doJob()
     {
-        usleep(rand(1200, 234234));
+        $name = $this->getString('name');
 
+        $r = rand(100000, 900000);
+        $this->logInfo('Sleeping for: '. (string)$r);
+        usleep($r);
+        $this->addResponseLine('Great success');
+        $this->logInfo('Task name: ' . $name);
         return self::EXIT_SUCCESS;
+    }
+
+    public function getName()
+    {
+        return 'SimpleTask';
     }
 }
